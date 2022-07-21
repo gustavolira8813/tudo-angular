@@ -1,0 +1,29 @@
+<div class="container">
+    <i class="fa-solid fa-arrow-left" routerLink="/dashboard"></i>
+    <h1>{{taskOpenned.title}}</h1>
+    <div>
+        <i class="fa-solid"></i>
+        <span>{{taskOpenned.description}}</span>
+    </div>
+    <div>
+        <i class="fa-solid fa-calendar-days"></i>
+        <span>{{taskOpenned.deadline}}</span>
+    </div>
+    <div>
+        <i class="fa-solid fa-tag"></i>
+        <span>{{taskOpenned.difficulty}}</span>
+    </div>
+    <div>
+        <i class="fa-solid"></i>
+        <span>{{taskOpenned.status}}</span>
+    </div>
+    <div>
+        <i class="fa-solid"></i>
+        <ul *ngIf="taskOpenned.subtasks">
+            <li *ngFor="let task of taskOpenned.subtasks">
+                <input type="checkbox" name="" id="" [checked]="task.status">
+                {{task.title}}
+            </li>
+        </ul>
+    </div>
+</div>

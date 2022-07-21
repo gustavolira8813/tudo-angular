@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'tudu-card-completed',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-completed.component.css']
 })
 export class CardCompletedComponent implements OnInit {
-
+  @Input() tasks: any
+  @Output() open = new EventEmitter()
+  
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  emitOpenEvent() {
+    this.open.emit(this.tasks)
+  }
 }

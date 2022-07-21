@@ -13,6 +13,7 @@ import { CardTodoComponent } from './dashboard/card-todo/card-todo.component';
 import { CardProgressComponent } from './dashboard/card-progress/card-progress.component';
 import { CardCompletedComponent } from './dashboard/card-completed/card-completed.component';
 import { MenuComponent } from './menu/menu.component';
+import { TaskComponent } from './dashboard/task/task.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MenuComponent } from './menu/menu.component';
     CardProgressComponent,
     CardCompletedComponent,
     MenuComponent,
+    TaskComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,11 +7,12 @@ import { tasks } from '../tasks';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  tasks = tasks 
+  tasks = tasks
   constructor() { }
 
   ngOnInit(): void {
-    
   }
- 
+  openDetails() {
+   
+ }
 }

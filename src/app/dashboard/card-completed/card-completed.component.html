@@ -1,1 +1,4 @@
-<p>card-completed works!</p>
+<div  [class]="'task-'+tasks.difficulty" class="completed-card" (click)="emitOpenEvent()" [routerLink]="['/tasks', tasks.id]">
+    <h3>{{tasks.title}}</h3>
+    <p>{{tasks.description}}</p>
+</div>

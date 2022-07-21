@@ -1,12 +1,16 @@
-<div class="container">
-    <h1>Entrar</h1>
-    <form action="">
-        <label for="">E=mail</label>
-        <input type="email" name="" id="" placeholder="E-mail">
-        <label for="">Senha</label>
-        <input type="password" name="" id="" placeholder="Senha">
-        <button class="btn btn-primary" type="submit">Entrar</button>
-        <button class="btn btn-light" type="submit">Entrar com o Google</button>
+<div class="container login">
+    <h1 class="login-title">Entrar</h1>
+    <form  class="login-form ">
+        <div class="form-floating mb-3 login-form-input">
+            <input  type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">E-mail</label>
+        </div>
+        <div class="form-floating mb-3 login-form-input">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Senha</label>
+        </div>
+        <button class="btn btn-primary login-form-buttom" type="submit">Entrar</button>
+        <button class="btn btn-light login-form-buttom" type="submit">Entrar com o Google</button>
     </form> 
     <span routerLink="/register">Não tenho conta</span>
 

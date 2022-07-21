@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'tudu-card-todo',
@@ -6,10 +6,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card-todo.component.css']
 })
 export class CardTodoComponent implements OnInit {
- @Input() tasks:any
+  @Input() tasks: any
+  @Output() open = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  emitOpenEvent() {
+    this.open.emit(this.tasks)
+  }
 }

@@ -2,7 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
+* {
+    font-family: 'Open Sans', sans-serif;
+}
 
+ul,
+li {
+    list-style-type: none;
+
+}
 :root {
     --color-primary: #1A55B4;
     --color-primary-2: #6AA5FF;
@@ -18,23 +26,168 @@ h1 {
     font-style: italic;
 }
 
-.task-container {
+/* Página de bem vindo */
+.welcome {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
-.task-container-box {
-    flex: 1;
+.welcome-title {
+    color: var(--color-primary);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3em;
+
 }
 
+.welcome-img {
+    width: 90%;
+    margin: 20px;
+}
+
+.welcome-footer {
+
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    background-color: var(--color-secondary-3);
+    right: 0;
+    left: 0;
+    border-radius: 30px 30px 0 0;
+}
+
+.welcome-points {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10vh;
+}
+
+.welcome-footer-link {
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+/* Página de registro */
+.register,
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.register-title,
+.login-title {
+    color: var(--color-primary);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3em;
+}
+
+.form-control {
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.form-control:focus {
+    border-radius: 5px;
+}
+
+.register-form,
+.login-form {
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        align-items: center;
+    }
+    
+    .register-form-buttom,
+    .login-form-buttom {
+        margin: 10px 0;
+        width: 260px;
+    }
+    
+    .register-form-input,
+    .login-form-input {
+        width: 90%;
+    }
+    
+    /* página dashboard */
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .dashboard-container {
+        background-color: var(--color-secondary-3);
+        overflow: auto;
+    }
+    
+    .dashboard-todo-list {
+        overflow: auto;
+        height: 25vh;
+    }
+    
+    .dashboard-todo-list::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .dashboard-progress-list {
+        overflow: auto;
+        height: 25vh;
+    }
+    
+    .dashboard-todo-list::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .dashboard-completed-list {
+        overflow: auto;
+        height: 20vh;
+    }
+    
+    .dashboard-completed-list::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .task-easy {
+        background-color: var(--color-primary-2);
+        cursor: pointer;
+    }
+    
+    .task-medium {
+        background-color: var(--color-secondary-2);
+        cursor: pointer;
+}
+
+.task-hard {
+    background-color: var(--color-secondary);
+    cursor: pointer;
+}
+
+/* menu */
 .main-menu {
     color: var(--color-primary);
     display: flex;
     gap: 15px;
     justify-content: space-evenly;
-    background-color: #fff;
     background-color: #fbc;
+    background-color: #fff;
     height: 10vh;
     position: fixed;
     bottom: 0;
@@ -43,7 +196,6 @@ h1 {
     align-items: center;
 
 }
-
 .main-menu-items {
     font-size: 2em;
     border-radius: 50%;

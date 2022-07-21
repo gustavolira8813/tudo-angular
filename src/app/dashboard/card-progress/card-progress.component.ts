@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'tudu-card-progress',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-progress.component.css']
 })
 export class CardProgressComponent implements OnInit {
-
+  @Input() tasks: any
+  @Output() open = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  emitOpenEvent() {
+    this.open.emit(this.tasks)
+  }
 }
