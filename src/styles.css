@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+
+:root {
+    --color-primary: #1A55B4;
+    --color-primary-2: #6AA5FF;
+    --color-secondary: #FE746F;
+    --color-secondary-2: #FEC857;
+    --color-secondary-3: rgb(235, 244, 253)
+}
+
+h1 {
+    color: var(--color-primary);
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: italic;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.task-container-box {
+    flex: 1;
+}
+
+.main-menu {
+    color: var(--color-primary);
+    display: flex;
+    gap: 15px;
+    justify-content: space-evenly;
+    background-color: #fff;
+    background-color: #fbc;
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+
+}
+
+.main-menu-items {
+    font-size: 2em;
+    border-radius: 50%;
+}
+
+.main-menu-items--plus {
+    font-size: 4.3em;
+}
+
+.active-menu-link {
+    color: var(--color-secondary);
+}
